@@ -1,0 +1,12 @@
+<div class="library">
+  <% @videos.each do |video| %>
+
+<!-- title -->
+    <a href="/todos/<%= video['id'] %>"><%= video['title'] %></a>
+<!-- Video -->
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video['urlsnipp'] %>" frameborder="0" allowfullscreen></iframe>
+<p><%= video['description'] %></p>
+  <% end %>
+
+</div>
