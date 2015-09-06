@@ -6,6 +6,8 @@
  <h2><%= @video['title'] %></h2>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @video['urlsnipp'] %>" frameborder="0" allowfullscreen></iframe>
+<form action="/videos/<%= @video['id'] %>/delete" method="post">
+        <button class="fake-link">Delete</button>
 
   <p><%= @video['description'] %></p>
 
