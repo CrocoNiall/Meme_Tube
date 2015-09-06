@@ -26,7 +26,7 @@ get '/show' do
   sql = 'select * from videos'
   
   @videos = @db.exec(sql)
-  puts @videos
+  
 
   erb :index
 end
