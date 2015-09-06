@@ -21,6 +21,19 @@ body {
   margin: 5px;
 }
 
+#az {
+  color: black;
+  text-align: left;
+
+}
+
+#azListItem a {
+  color: black;
+}
+#azList a {
+  color: inherit;
+}
+
 .vid a{
   color: black;
 }
@@ -57,7 +70,7 @@ li {
   width: 300px;
 }
 #textArea {
-  height: 50px;
+  height: 100px;
 }
 
 

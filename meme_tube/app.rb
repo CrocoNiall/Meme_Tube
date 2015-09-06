@@ -33,7 +33,11 @@ get '/show' do
 end
 
 post '/video' do
-  sql = "insert into videos (title, description, urlsnipp) values ('#{params[:title]}', '#{params[:description]}', '#{params[:urlsnipp]}') returning *"
+
+  url = params[:urlsnipp].split('=').last
+  puts url
+
+  sql = "insert into videos (title, description, urlsnipp) values ('#{params[:title]}', '#{params[:description]}', '#{url}') returning *"
   video = @db.exec(sql).first
   
   redirect to "/videos/#{video['id']}"
@@ -46,4 +50,21 @@ get '/videos/:id' do
   @video = @db.exec(sql).first
 
   erb :show
+end
+
+get '/az' do
+  @title = 'A-Z of Videos'
+  sql = "select * from videos order by id DESC"
+  @videos = @db.exec(sql)
+
+  erb :az
+end
+
+
+# DELETE
+post '/videos/:id/delete' do
+  sql = "delete from videos where id = #{params[:id]}"
+  @db.exec(sql)
+
+  redirect to '/videos'
 end
