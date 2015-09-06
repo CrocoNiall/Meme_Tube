@@ -23,11 +23,19 @@ get '/videos/new' do
 end
 
 # EDIT
-get '/videos/:id/edit' do
-  sql = "select * from videos where id = #{params[:id]}"
-  @todo = @db.exec(sql).first
+# get '/videos/:id/edit' do
+#   sql = "select * from videos where id = #{params[:id]}"
+#   @todo = @db.exec(sql).first
 
-  erb :edit
+#   erb :edit
+# end
+
+# UPDATE
+post '/videos/:id/edit' do
+  sql = "update videos set title = '#{params[:editTitle]}', description = '#{params[:editDescription]}' where id = #{params[:id]}"
+  @db.exec(sql)
+
+  redirect to "/videos/#{params['id']}"
 end
 
 get '/show' do
