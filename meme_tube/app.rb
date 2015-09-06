@@ -4,6 +4,7 @@ require 'pry'
 require 'pg'
 require 'httparty'
 
+
 before do
   @db = PG.connect(dbname: 'movies', host: 'localhost')
 end
