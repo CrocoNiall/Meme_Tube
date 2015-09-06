@@ -18,11 +18,12 @@ end
 
 # NEW
 get '/videos/new' do
+  @title = 'Add a video'
   erb :new
 end
 
 get '/show' do
-  @title = 'Video App'
+  @title = 'All Videos'
   sql = 'select * from videos'
   
   @videos = @db.exec(sql)
@@ -40,6 +41,7 @@ end
 
 # SHOW
 get '/videos/:id' do
+  @title = 'View/Edit Video'
   sql = "select * from videos where id = #{params[:id]}"
   @video = @db.exec(sql).first
 

@@ -1,14 +1,13 @@
+ 
   <form action="/video" method="post">
 
-        <input id="task" type="text" name="name" class="validate">
-        <label for="title">Title</label>
+        <input class='formElement' id="task" type="text" name="name" class="validate" placeholder='Video Title'>
 
-        <input id="description" type="text" name="description" class="validate">
-        <label for="description">Description</label>
+        <textarea id='textArea' class='formElement'id="description" type="text" name="description" class="validate" placeholder='Video Description'></textarea>
 
-        <input id="description" type="text" name="urlsnipp" class="validate">
-        <label for="urlsnipp">YouTube URL</label>
+        <input class='formElement'id="description" type="text" name="urlsnipp" class="validate" placeholder='YouTube URL e.g. www.youtube.com/j83987k'>
+  
    
-    <button type="submit" name="add_video">Add
-    </button>
+    <button class='formElement' type="submit" name="add_video">Add Video to Library</button>
+    
   </form>

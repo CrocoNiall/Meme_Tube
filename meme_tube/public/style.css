@@ -1,0 +1,101 @@
+body {
+
+}
+
+#container{
+  display: block;
+  width: 850px;
+  margin: 0 auto;
+
+}
+.vid {
+  display: inline-block;
+  width: 400px;
+  text-align: left;
+  margin: 5px;
+}
+.showVid {
+  display: inline-block;
+  width: 600px;
+  text-align: left;
+  margin: 5px;
+}
+
+.vid a{
+  color: black;
+}
+nav {
+  background-color: black;
+  color: white;
+  height: 70px;
+  margin-top: 3px;
+}
+a {
+  color: white;
+  font-weight: 700;
+
+}
+ul{
+  
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+li {
+  display: inline-block;
+  margin: 10px;
+  padding: 0;
+  font-weight: 700;
+
+}
+
+.formElement{
+  display: block;
+  margin-left: 10px;
+  margin-top: 10px;
+  height: 20px;
+  width: 300px;
+}
+#textArea {
+  height: 50px;
+}
+
+
+#header{
+  height: 215px;
+  border: solid black 5px;
+  border-radius: 2px;
+  padding: 10px;
+  font-family: 'Six Caps', sans-serif;
+  letter-spacing: 3px;
+
+}
+h1 {
+  font-size: 60px;
+  margin: 0;
+  border-bottom: solid black 2px;
+  border-top: solid black 2px;
+
+
+}
+h2 {
+  margin: 10px 0 10px 15px;
+  text-align: left;
+  font-family: 'Six Caps', sans-serif;
+  letter-spacing: 5px;
+  font-size: 30px;
+  }
+
+h3 {
+  letter-spacing: 7px;
+}
+
+#main {
+  text-align: center;
+  margin-top: 20px;
+  border: solid black 5px;
+  border-radius: 2px;
+  min-height: 300px;
+
+
+}

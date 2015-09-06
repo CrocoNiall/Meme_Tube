@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title><%= @title %></title>
+
+  <link rel="stylesheet" href="/style.css">
+  <link href='https://fonts.googleapis.com/css?family=Six+Caps' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
-<div id='container'>
-  <nav>
-    <ul>
-      <li><a href="/">Videos</a></li>
-      <li><a href="/new">Add Video</a></li>
-    </ul>
-
-  </nav>
+  <div id='container'>
+    <div id='header'>
+    <h1>Meme Tube</h1>
+    <h3>Fun for all the family.</h3>
+    <nav>
+      <ul>
+        <li><a href="/">Videos</a></li>
+        <li><a href="/videos/new">Add Video</a></li>
+        <li><a href="/videos/new">Edit Video</a></li>
+      </ul>
+    </nav>
+    </div>
+  <div id='main'>
+  <h2><%= @title %></h2>
 
   <%= yield %>
 
-
+  </div>
 </div>
 </body>
 </html>

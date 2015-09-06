@@ -1,12 +1,13 @@
 <div class="library">
   <% @videos.each do |video| %>
+<div class='vid'>
+  <!-- title -->
+      <a href="/videos/<%= video['id'] %>"><%= video['title'] %></a>
+  <!-- Video -->
 
-<!-- title -->
-    <a href="/todos/<%= video['id'] %>"><%= video['title'] %></a>
-<!-- Video -->
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= video['urlsnipp'] %>" frameborder="0" allowfullscreen></iframe>
-<p><%= video['description'] %></p>
+  <iframe width="400" height="215" src="https://www.youtube.com/embed/<%= video['urlsnipp'] %>" frameborder="0" allowfullscreen></iframe>
+  <p><%= video['description'] %></p>
+</div>
   <% end %>
 
 </div>
