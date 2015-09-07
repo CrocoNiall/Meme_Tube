@@ -23,15 +23,8 @@ get '/videos/new' do
   erb :new
 end
 
-# EDIT
-# get '/videos/:id/edit' do
-#   sql = "select * from videos where id = #{params[:id]}"
-#   @todo = @db.exec(sql).first
 
-#   erb :edit
-# end
-
-# UPDATE
+# UPDATE a video
 post '/videos/:id/edit' do
   sql = "update videos set title = '#{params[:editTitle]}', description = '#{params[:editDescription]}' where id = #{params[:id]}"
   @db.exec(sql)
@@ -39,6 +32,7 @@ post '/videos/:id/edit' do
   redirect to "/videos/#{params['id']}"
 end
 
+#SHOW all videos 
 get '/show' do
   @title = 'All Videos'
   sql = 'select * from videos'
@@ -49,6 +43,7 @@ get '/show' do
   erb :index
 end
 
+#ADD a video
 post '/video' do
 
   url = params[:urlsnipp].split('=').last
@@ -58,7 +53,7 @@ post '/video' do
   redirect to "/videos/#{video['id']}"
 end
 
-# SHOW
+# SHOW video by ID
 get '/videos/:id' do
   @title = 'View/Edit Video'
   sql = "select * from videos where id = #{params[:id]}"
@@ -67,6 +62,7 @@ get '/videos/:id' do
   erb :show
 end
 
+#a-z of videos
 get '/az' do
   @title = 'A-Z of Videos'
   sql = "select * from videos order by title ASC"
