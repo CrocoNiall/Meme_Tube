@@ -43,8 +43,11 @@ get '/show' do
   erb :index
 end
 
-#ADD a video
+#CREATE a video
 post '/video' do
+
+  #The code below will get the user unput and slit it on '=' to retrive only the youtube video id.
+
 
   url = params[:urlsnipp].split('=').last
   sql = "insert into videos (title, description, urlsnipp) values ('#{params[:title]}', '#{params[:description]}', '#{url}') returning *"
